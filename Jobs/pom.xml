@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>jobs</artifactId>
+    <packaging>war</packaging>
+    <name>jobs</name>
+    <url>http://maven.apache.org</url>
+
+    <parent>
+        <groupId>Jobs</groupId>
+        <artifactId>Jobs-parent</artifactId>
+        <version>1.0</version>
+        <relativePath>../Jobs-parent</relativePath>
+    </parent>
+    <properties>
+        <jsf2.version>2.1.29</jsf2.version>
+        <jsf2.api.version>2.2</jsf2.api.version>
+        <primefaces.version>5.1</primefaces.version>
+
+        <jstl.version>1.2</jstl.version>
+        <servlet.version>2.5</servlet.version>
+        <jsp.version>2.1</jsp.version>
+        <injection.version>1</injection.version>
+        <spring.security.version>4.0.4.RELEASE</spring.security.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>Jobs</groupId>
+            <artifactId>Jobs-services</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <version>${springframework.boot}</version>
+        </dependency>
+       
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web-services</artifactId>
+            <version>${springframework.boot}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- Library from java.net, integrate Spring with JAX-WS -->
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.7.21</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <finalName>jobs</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
